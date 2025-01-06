@@ -1,0 +1,20 @@
+vim.g.mapleader = " "
+local map = vim.keymap.set
+
+map("n", "<leader>ee", ":NvimTreeToggle<cr>", { desc = "NvimTree Toggle", noremap = true, silent = true })
+map("n", "<leader>ef", ":NvimTreeFocus<cr>", { desc = "NvimTree Focus", noremap = true, silent = true })
+map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Fuzzy find recent files" })
+map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find string in cwd" })
+map("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "Find git status of files if directory is git repo" })
+map("n", "<leader>fc", "<cmd>Telescope git_commits<cr>", { desc = "Find git commits if directory is git repo" })
+map("n", "<leader>h", ":ToggleTerm size=15 dir=. direction=horizontal<cr>", { desc = "Open terminal in horizontal mode"})
+map("n", "<leader>v", ":ToggleTerm size=95 dir=. direction=vertical<cr>", { desc = "Open terminal in vertical mode"})
+map("n", "<leader>w", ":bd<cr>", {desc = "close current open buffer without exiting nvim"})
+map("n", "<leader>t", ":e #<cr>", {desc = "remap to switch to alternative or last opened buffer"})
+map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", {desc = "Diagnostics (Trouble)"})
+map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", {desc = "Buffer Diagnostics (Trouble)"})
+map("n", "<leader>cs", "<cmd>Trouble symbols toggle focus=false<cr>", {desc = "Symbols (Trouble)"})
+map("n", "<leader>cl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", {desc = "LSP Definitions / references / ... (Trouble)"})
+map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", {desc = "Location List (Trouble)"})
+map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", {desc = "Quickfix List (Trouble)"})
